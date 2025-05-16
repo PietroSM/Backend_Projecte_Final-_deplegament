@@ -196,7 +196,7 @@ router.put('/:id/edit', async(req, res) => {
                         return res.status.json({error: "Error al editar la imatge."});
                     }
 
-                    resultatProducte.imatge = `http://vps-281e1278.vps.ovh.net:8080/public/productes/${nomImatge}`;
+                    resultatProducte.imatge = `http://vps-281e1278.vps.ovh.net:8081/public/productes/${nomImatge}`;
                     
                     const resultat = await resultatProducte.save();
                     res.status(201).send({id: resultat._id});
@@ -327,7 +327,7 @@ router.post('/afegir', async(req, res) => {
                 client: idClient,
                 stock: req.body.stock,
                 preu: req.body.preu,
-                imatge: `http://vps-281e1278.vps.ovh.net:8080/public/productes/${nomImatge}`,
+                imatge: `http://vps-281e1278.vps.ovh.net:8081/public/productes/${nomImatge}`,
                 lat: req.body.lat,
                 lng: req.body.lng,
                 enviament: req.body.enviament,

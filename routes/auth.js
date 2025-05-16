@@ -75,7 +75,7 @@ router.post('/registrar', async(req, res) => {
                 nom: req.body.nom,
                 cognom: req.body.cognom,
                 correu: req.body.correu,
-                imatge: `http://vps-281e1278.vps.ovh.net:8080/public/uploads/${nomImatge}`,
+                imatge: `http://vps-281e1278.vps.ovh.net:8081/public/uploads/${nomImatge}`,
                 lat: req.body.lat,
                 lng: req.body.lng,
                 adresa: req.body.adresa
@@ -138,6 +138,7 @@ router.post('/registrar', async(req, res) => {
 
 // Valida Si el token es valid ✔
 router.get('/validar', async(req, res) => {
+    console.log("hola");
     let token = req.headers['authorization'];
 
     try{

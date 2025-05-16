@@ -19,7 +19,7 @@ let app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:8100',
+    origin: ['http://localhost:8100', 'https://localhost'],
     methods: ['GET', 'POST', 'PUT']
   }
 });
@@ -29,7 +29,7 @@ require(__dirname+"/routes/socket")(io);
 
 
 app.use(cors({
-    origin: 'http://localhost:8100',
+    origin: ['http://localhost:8100', 'https://localhost'],
     credentials: true
 }));
 

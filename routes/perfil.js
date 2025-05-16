@@ -75,7 +75,7 @@ router.put('/:id/imatge', async(req, res) => {
                         if(error){
                             return res.status.json({error: "Error al editar la imatge."});
                         }
-                        resultatClient.imatge = `http://vps-281e1278.vps.ovh.net:8080/public/uploads/${nomImatge}`;
+                        resultatClient.imatge = `http://vps-281e1278.vps.ovh.net:8081/public/uploads/${nomImatge}`;
                         
                         const resultat = await resultatClient.save();
                         res.status(201).send({id: resultat._id});
@@ -187,7 +187,7 @@ router.get('/:id', async(req, res) => {
                 'propietat': resultat._id == idClient ? true : false
             };
 
-            res.status(200).send({client});
+            res.status(200).send({usuari: client});
         }else{
             res.status(404).send({error: "Client no trobat."});
         }

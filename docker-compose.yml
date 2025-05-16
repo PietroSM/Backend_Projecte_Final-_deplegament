@@ -10,6 +10,8 @@ services:
       - /usr/src/app/node_modules
     depends_on:
       - mymongodb
+    env_file:
+      - .env 
   mymongodb:
     container_name: mymongodatabase
     image: mongo
