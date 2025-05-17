@@ -55,7 +55,8 @@ router.get('/', async(req, res) => {
                   { nom: { $regex: req.query.search || '', $options: 'i' } },
                   { adresa: { $regex: req.query.search || '', $options: 'i' } }
                 ]
-              }
+              },
+              { temporada: { $regex: req.query.temporada || '', $options: 'i' }}
             ]
         };
     
@@ -63,6 +64,8 @@ router.get('/', async(req, res) => {
         if (clientFiltratId) {
         filtre.$and.push({ client: clientFiltratId });
         }
+
+
 
 
         const resultat = await Producte.find(filtre).populate("client");
