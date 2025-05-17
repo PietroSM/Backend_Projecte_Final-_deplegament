@@ -87,6 +87,7 @@ router.get('/', async(req, res) => {
                     'lat': element.lat,
                     'lng': element.lng,
                     'enviament': element.enviament,
+                    'recogida': element.recogida,
                     'temporada': element.temporada,
                     'tipus': element.tipus,
                     'id': element._id,

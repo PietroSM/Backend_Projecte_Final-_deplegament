@@ -6,7 +6,7 @@ let userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'El Alies es obligatori.'],
         unique: true,
-        minlength: [4, 'El Alies es massa curt.']
+        minlength: [3, 'El Alies es massa curt.']
     },
     contrasenya: {
         type: String,
