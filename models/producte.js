@@ -6,7 +6,7 @@ let producteSchema = new mongoose.Schema({
         type: String,
         required: [true, 'El Nom es obligatori.'],
         minlength: [5, 'El Nom es massa curt.'],
-        maxlength: [15, 'El Nom es massa llarg.']
+        maxlength: [25, 'El Nom es massa llarg.']
     },
     client: {
         type: mongoose.Schema.Types.ObjectId,
