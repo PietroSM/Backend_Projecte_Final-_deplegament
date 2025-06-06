@@ -138,7 +138,6 @@ router.post('/registrar', async(req, res) => {
 
 // Valida Si el token es valid ✔
 router.get('/validar', async(req, res) => {
-    console.log("hola");
     let token = req.headers['authorization'];
 
     try{

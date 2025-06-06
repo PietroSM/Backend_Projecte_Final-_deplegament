@@ -143,7 +143,6 @@ router.get('/:id', async(req, res) => {
 
 
 //Crear Nova Conversa
-//TODO repassar sintaxis
 router.post('/', async (req, res) => {
   let token = req.headers['authorization'];
   let validar = validarToken(token);
