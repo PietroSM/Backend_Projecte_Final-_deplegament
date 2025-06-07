@@ -8,7 +8,6 @@ let generarToken = (id, login, rol) => jwt.sign(
 
 let validarToken = token => {
     try {
-        console.log();
         let resultat = jwt.verify(token.substring(7),process.env.SECRET);
 
         return resultat;

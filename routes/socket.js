@@ -25,9 +25,6 @@ module.exports = function (io) {
         let validar = validarToken('bearer ' + missatge.token);
         let idClient = validar.id;
 
-
-        // console.log(missatge);
-
         let conversaResultat = await Conversa.findById(missatge.idConversa);
         let emisorResultat = await Client.findById(idClient);
         

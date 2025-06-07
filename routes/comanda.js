@@ -201,7 +201,6 @@ router.get('/vendes', async(req, res) => {
     }
         
     } catch (error) {
-        console.log(error);
         res.status(500).send({error: "Error llistant les comandes"});
     }
 });

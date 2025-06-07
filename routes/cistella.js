@@ -112,7 +112,6 @@ router.post('/', async(req, res) => {
             res.status(201).send({resultat: "S'ha afegit correctament" })
         }
     } catch(error){
-        console.log(error);
         res.status(500).send({error: "Error al afegir a la cistella"});
     }
 });
