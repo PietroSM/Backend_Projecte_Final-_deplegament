@@ -170,6 +170,7 @@ router.put('/:id/edit', async(req, res) => {
             resultatProducte.recogida = req.body.recogida;
             resultatProducte.temporada = req.body.temporada;
             resultatProducte.tipus = req.body.tipus;
+            resultatProducte.adresa = req.body.adresa;
             
 
             if(req.body.imatge && req.body.imatge != resultatProducte.imatge){
